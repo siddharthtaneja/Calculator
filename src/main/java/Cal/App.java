@@ -17,6 +17,47 @@ public class App
     public static void Second(){
         System.out.println("Enter Second Number");
     }
+    public static void add(){
+        Scanner s =new Scanner(System.in);
+        First();
+        int a = s.nextInt();
+        Second();
+        int b = s.nextInt();
+        System.out.println(a+b);
+        TheIntro();
+    }
+    public static void substract(){
+        Scanner s = new Scanner(System.in);
+        First();
+        int a =s.nextInt();
+        Second();
+        int b = s.nextInt();
+        System.out.println(a-b);
+        TheIntro();
+    }
+    public static void multiply(){
+        Scanner s = new Scanner(System.in);
+        First();
+        int a = s.nextInt();
+        Second();
+        int b = s.nextInt();
+        System.out.println(a*b);
+        TheIntro();
+    }
+    public static void divide(){
+        Scanner s = new Scanner(System.in);
+        First();
+        double a = s.nextDouble();
+        Second();
+        double b = s.nextDouble();
+        if(b == 0){
+            System.out.println("InAppropiate");
+            TheIntro();
+        }
+        else
+            System.out.println(a/b);
+        TheIntro();
+    }
 
     public static void main(String[] args ) {
         Scanner s = new Scanner(System.in);
@@ -24,41 +65,16 @@ public class App
         int choice = s.nextInt();
         while(choice != 0){
             if(choice == 1){
-                First();
-                int a = s.nextInt();
-                Second();
-                int b = s.nextInt();
-                System.out.println(a+b);
-                TheIntro();
+            add();
             }
             else if(choice == 2){
-                First();
-                int a =s.nextInt();
-                Second();
-                int b = s.nextInt();
-                System.out.println(a-b);
-                TheIntro();
+                substract();
             }
             else if(choice == 3){
-                First();
-                int a = s.nextInt();
-                Second();
-                int b = s.nextInt();
-                System.out.println(a*b);
-                TheIntro();
+                multiply();
             }
             else if(choice == 4){
-                First();
-                double a = s.nextDouble();
-                Second();
-                double b = s.nextDouble();
-                if(b == 0){
-                    System.out.println("InAppropiate");
-                    TheIntro();
-                }
-                else
-                    System.out.println(a/b);
-                TheIntro();
+                divide();
             }
             else {
                 System.out.println("Plz enter a valid choice");
